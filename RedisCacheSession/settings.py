@@ -124,6 +124,9 @@ CACHES = {
     'default': {
         'BACKEND': 'redis_cache.RedisCache',
         'LOCATION': 'redis://192.168.56.102:6379/',  # remote access: /etc/redis/redis.conf !!!
+        'OPTIONS': {
+            'DB': 1,
+        }
     },
 }
 
