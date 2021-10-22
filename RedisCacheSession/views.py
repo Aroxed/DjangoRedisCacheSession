@@ -1,11 +1,12 @@
 import datetime
 import time
 
+from django.core.cache import cache
 from django.http import HttpResponse
 from django.views.decorators.cache import cache_page
-from django.core.cache import cache
 
-@cache_page(60)  # sec
+
+@cache_page(10)  # sec
 def get_long_running_result(request):
     cache.set('a', "abcd")
     time.sleep(3)

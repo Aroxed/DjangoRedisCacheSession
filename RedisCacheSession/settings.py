@@ -123,7 +123,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CACHES = {
     'default': {
         'BACKEND': 'redis_cache.RedisCache',
-        'LOCATION': 'redis://192.168.56.102:6379/',  # remote access: /etc/redis/redis.conf !!!
+        # change according to your redis host IP
+        'LOCATION': 'redis://192.168.1.5:6379/',  # remote access: /etc/redis/redis.conf !!!
         'OPTIONS': {
             'DB': 1,
         }
